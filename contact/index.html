@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="title" content="Ресторан Эклектика в Москве | Контакты" />
+    <meta name="keywords" content="ресторан, restaurant, Москва, обед, ужин, эклектика, кухня, блюда, еда">
+    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="Ресторан «Эклектика» — это место, где сочетаются утонченный вкус и теплая атмосфера. «Эклектика» предлагает уютные залы для семейных ужинов, романтических свиданий и деловых обедов. Мы ценим ваше время и комфорт, поэтому обеспечиваем высокий уровень сервиса."
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow">
+    <title>Ресторан Эклектика в Москве | Контакты</title>
+    <link rel="stylesheet" href="../style/colors.css" />
+    <link rel="stylesheet" href="../style/fonts.css" />
+    <link rel="stylesheet" href="../style/common.css" />
+    <link rel="stylesheet" href="../style/contact.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>ЭКЛЕКТИКА</h1>
+      <div id="menu-container-full">
+        <input type="checkbox" id="menu-hamburger" />
+        <label for="menu-hamburger"></label>
+        <div id="menu-container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/menu/">Меню</a></li>
+            <li><a href="/contact/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="calendar">
+      <div class="close">❮</div>
+      <h2>Бронирование</h2>
+      <div class="month-selector">
+        <!--scibididopdop-->
+      </div>
+      <table class="day-selector">
+        <thead>
+          <tr>
+            <th>Пн</th>
+            <th>Вт</th>
+            <th>Ср</th>
+            <th>Чт</th>
+            <th>Пт</th>
+            <th>Сб</th>
+            <th>Вс</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!---scibididopdop-->
+        </tbody>
+      </table>
+      <h3>Выберите время</h3>
+      <div class="time-selector">
+        <!---scibididopdop-->
+      </div>
+    </div>
+    <div class="container">
+      <div id="galleryPicContact"></div>
+      <article id="order" class="contact">
+        <h3>Бронирование столика<br/>в ресторане «ЭКЛЕКТИКА»</h3>
+        <p>
+          Заполните форму ниже, чтобы зарезервировать столик у нас в ресторане.
+          Мы будем ждать вас!
+        </p>
+        <form action="/booking" method="POST">
+          <input type="text" placeholder="Имя" name="name" />
+          <input type="text" placeholder="Телефон" name="phone" />
+          <input type="text" placeholder="Почта" name="email" />
+          <div class="guests">
+            <div class="form-element">
+              <button class="number-control" id="num-guests-dec" type="button">
+                -
+              </button>
+              <input type="text" id="num-guests" value="1" disabled />
+              <button class="number-control" id="num-guests-inc" type="button">
+                +
+              </button>
+              Количество гостей
+            </div>
+            <div class="form-element">
+              <input
+                id="datetimepicker"
+                type="text"
+                name="date"
+                placeholder="Дата и время"
+              />
+            </div>
+          </div>
+          <input type="text" placeholder="Пожелания" name="comments" />
+          <button type="submit">Забронировать</button>
+        </form>
+      </article>
+
+      <article id="address" class="contact">
+        <h3>
+          Мы ценим, что вы выбрали наш ресторан и обещаем сделать ваш визит
+          незабываемым!
+        </h3>
+        <p>
+          <span>Мы открыты:</span><br /><br />
+          Пн-Чт с 18:00 до 23:00<br />
+          Пт с 17:00 до 23:00<br />
+          Сб-Вс с 12:00 до 23:00<br /><br />
+          Москва, ул. Ленина, д.11<br />
+          <a href="tel:+79110000080">+7 (911) 000-00-80</a>
+        </p>
+      </article>
+      <div id="galleryPicMap"></div>
+    </div>
+
+    <footer>
+      <h3>ЭКЛЕКТИКА</h3>
+      <div class="social">
+        <p>Следите за нами в соцсетях</p>
+        <div>
+          <ul>
+            <li>
+              <a href="">
+                <img src="./assets/svg/tg.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/svg/vk.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/svg/dzen.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/svg/youtube.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div> 
+    </footer>
+    <script
+      async
+      src="./index.js"
+      async="false"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
