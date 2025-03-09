@@ -56,7 +56,7 @@
     z-index: 3;
 }
 
-.bigButton .bigButton_backdrop {
+/* .bigButton .bigButton_backdrop {
     position: absolute;
     left: 50vw;
     top: 568px;
@@ -66,7 +66,7 @@
     background-color: var(--button-active);
     transition: height ease 0.5s, width ease 0.5s, top ease 0.5s, left ease 0.5s;
     z-index: 4;
-}
+} */
 
 .bigButton a {
     text-align: center;
@@ -77,12 +77,17 @@
     z-index: 5;
 }
 
-.bigButton:hover .bigButton_backdrop {
+.bigButton:hover{
+    background-color: var(--button-active);
+}
+
+
+/* .bigButton:hover .bigButton_backdrop {
     left: calc(50vw - 210px);
     top: 528px;
     height: 80px;
     width: 420px;
-}
+} */
 
 .mobilePromo {
     margin-top: 20px;
@@ -191,6 +196,7 @@
 .values #leftArrow:hover {
     transform: scale(1.25);
 }
+
 
 /* Наиболее простой способ (поскольку не стояло задачи строить серьезный JS код) 
  * без управления состоянием или более сложных вариантов, сделать разный текст – 
@@ -417,9 +423,9 @@
     .bigButton a {
         font-size: 18px;
     }
-    .bigButton_backdrop {
+    /* .bigButton_backdrop {
         display: none;
-    }
+    } */
 
     /* галерея – самое существенное изменение – перенос кнопок, в остальном достаточно убрать
      * ограничение высоты у родителя (для детей наоборот, задать в пискелях) и изменить flex-direction */

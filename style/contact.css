@@ -95,7 +95,7 @@
 }
 
 #order button[type="submit"] {
-    background: #E76020;
+    background: var(--button);
     color: white;
     width: 350px;
     padding: 10px;
@@ -103,6 +103,9 @@
     border-radius: 5px;
 }
 
+#order button[type="submit"]:hover {
+    background-color: var(--button-active);
+}
 
 #order p {
     margin: 15px 0;

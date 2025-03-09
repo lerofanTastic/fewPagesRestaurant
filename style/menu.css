@@ -76,14 +76,20 @@ main#menu {
     padding: 22px 0 23px 0; 
     width: 90%;
 }
+.detailsButton:hover{
+    background-color: var(--button-active);
+}
 
 #detailsWindow {
+    z-index: 1;
     display: none;
     background-color: white;
     padding: 30px;
     position: fixed;
-    top: 200px;
-    margin: 0 35vw;
+    top: 30vh;
+    left: 35vw;
+    right: 35vw;
+    /* margin: 0 15vw; */
     border: 3px solid darkgray;
 }
 
@@ -138,12 +144,16 @@ main#menu {
     color: black;
     background-color: lightgray;
 }
+.menu-category button:hover{
+    background-color: lightgray;
+    color: black;
+}
 
 button#booking {
     position: fixed;
     top: 140px;
     right: 0;
-    background-color: #E76020;
+    background-color: var(--button);
     color: lightgray;
     text-align: left;
     font-size: 1.0em;
@@ -152,7 +162,9 @@ button#booking {
     padding: 15px 20px;
     border-radius: 10px 0 0 10px;
 }
-
+button#booking:hover{
+    background-color: var(--button-active);
+}
 button#booking:before {
     content: "ОНЛАЙН-БРОНИРОВАНИЕ";
 }

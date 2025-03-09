@@ -65,6 +65,9 @@ nav a {
     line-height: 26px;
     text-decoration: none;
 }
+nav a:hover{
+    color: var(--text-inactive);
+}
 
 nav a[inactive] {
     color: var(--text-inactive);
@@ -86,6 +89,13 @@ footer h3 {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text);
+}
+
+.footer-icon{
+    transition: transform ease 0.5s;
+}
+.footer-icon:hover{
+    transform: scale(1.25);
 }
 
 .social {
