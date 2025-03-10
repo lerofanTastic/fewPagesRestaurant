@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="./style/fonts.css" />
     <link rel="stylesheet" href="./style/common.css" />
     <link rel="stylesheet" href="./style/home.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous">
+    </script>
     <script src="/index.js" type="text/javascript"></script>
   </head>
   <body>
@@ -46,13 +51,7 @@
         <!-- M: У всех отзывов был рейтинг 5 звезд, графики для "незакрашенной" звезды небыло,
                         но реализовать сиситему где в отзыве будет написано число звезд тоже не сложно, 
                         отталкиваясь от того что есть -->
-        <div class="starRating">
-          <img src="./assets/svg/star.svg" />
-          <img src="./assets/svg/star.svg" />
-          <img src="./assets/svg/star.svg" />
-          <img src="./assets/svg/star.svg" />
-          <img src="./assets/svg/star.svg" />
-        </div>
+        <div class="starRating"></div>
         <p class="reviewText"><!-- Текст отзыва --></p>
       </section>
     </template>
@@ -70,122 +69,24 @@
     <article id="gallery" class="gallery about">
       <div class="galleryPic">
         <div class="mob">
-          <img id="leftArrow" src="./assets/svg/left-arrow.svg" />
-          <img id="rightArrow" src="./assets/svg/left-arrow.svg" />
+          <img class="leftArrow" src="./assets/svg/left-arrow.svg" />
+          <img class="rightArrow" src="./assets/svg/left-arrow.svg" />
         </div>
       </div>
       <div class="galleryText">
         <h1></h1>
         <p></p>
         <div class="dsk">
-          <img id="leftArrow" src="./assets/svg/left-arrow.svg" />
-          <img id="rightArrow" src="./assets/svg/left-arrow.svg" />
+          <img class="leftArrow" src="./assets/svg/left-arrow.svg" />
+          <img class="rightArrow" src="./assets/svg/left-arrow.svg" />
         </div>
       </div>
     </article>
     <article id="reviewsSection">
       <h2 id="reviewsSubheader">Отзывы</h2>
       <section id="reviewsCarousel">
-        <img
-          id="leftReviewArrow"
-          class="inactive"
-          src="./assets/svg/big-right-arrow.svg"
-        />
-        <div id="reviews" class="reviews">
-          <section class="reviewContainer">
-            <!-- src оставлен пустым чтобы заполнить его средствами js -->
-            <img class="reviewPhoto" src="./assets/reviews/reviewIgor.png" />
-            <p class="reviewHeader">Игорь Ковалев</p>
-            <!-- M: У всех отзывов был рейтинг 5 звезд, графики для "незакрашенной" звезды небыло,
-                                но реализовать сиситему где в отзыве будет написано число звезд тоже не сложно, 
-                                отталкиваясь от того что есть -->
-            <div class="starRating">
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-            </div>
-            <p class="reviewText">
-              Провели здесь день рождения - атмосфера просто великолепная.
-              Персонал веселый и отзывчивый, кухня порадовала. Особенно
-              понравились закуски к пиву! Обязательно будем возвращаться, чтобы
-              попробовать все блюда из меню.
-            </p>
-          </section>
-
-          <section class="reviewContainer">
-            <!-- src оставлен пустым чтобы заполнить его средствами js -->
-            <img class="reviewPhoto" src="./assets/reviews/reviewMarina.png" />
-            <p class="reviewHeader">Марина Соколова</p>
-            <!-- M: У всех отзывов был рейтинг 5 звезд, графики для "незакрашенной" звезды небыло,
-                                но реализовать сиситему где в отзыве будет написано число звезд тоже не сложно, 
-                                отталкиваясь от того что есть -->
-            <div class="starRating">
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-            </div>
-            <p class="reviewText">
-              Посетили семейный ресторан с подругами на девичнике, и это был наш
-              лучший выбор! У нас был волшебный вечер - вкусная еда, отличные
-              коктейли и веселая атмосфера. Обязательно вернемся сюда с мужьями!
-              Очень рекомендую для дружеских посиделок и праздников.
-            </p>
-          </section>
-
-          <section class="reviewContainer">
-            <!-- src оставлен пустым чтобы заполнить его средствами js -->
-            <img
-              class="reviewPhoto"
-              src="./assets/reviews/reviewAleksandr.png"
-            />
-            <p class="reviewHeader">Александр Петров</p>
-            <!-- M: У всех отзывов был рейтинг 5 звезд, графики для "незакрашенной" звезды небыло,
-                                но реализовать сиситему где в отзыве будет написано число звезд тоже не сложно, 
-                                отталкиваясь от того что есть -->
-            <div class="starRating">
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-            </div>
-            <p class="reviewText">
-              Этот ресторан - настоящая находка! Проводил здесь деловой ужин с
-              партнерами, и все остались в восторге. Обслуживание на высшем
-              уровне, персонал внимателен к каждой детали. Кухня порадовала
-              своим разнообразием. Отличное место для деловых встреч и ужинов в
-              уютной обстановке. Рекомендую!
-            </p>
-          </section>
-
-          <section class="reviewContainer">
-            <!-- src оставлен пустым чтобы заполнить его средствами js -->
-            <img class="reviewPhoto" src="./assets/reviews/reviewNatalya.png" />
-            <p class="reviewHeader">Наталья Иванова</p>
-            <!-- M: У всех отзывов был рейтинг 5 звезд, графики для "незакрашенной" звезды небыло,
-                                но реализовать сиситему где в отзыве будет написано число звезд тоже не сложно, 
-                                отталкиваясь от того что есть -->
-            <div class="starRating">
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-              <img src="./assets/svg/star.svg" />
-            </div>
-            <p class="reviewText">
-              Посетили семейный ресторан вместе с мужем и детьми - отличное
-              место для семейного ужина! Обстановка очень уютная, а обслуживание
-              выше всяких похвал. Наши дети в восторге от детского меню, которое
-              оказалось не только вкусным, но и заботливо подготовленным с
-              учетом детских предпочтений. Будем рекомендовать всем друзьям и
-              обязательно вернемся.
-            </p>
-          </section>
-        </div>
+        <img id="leftReviewArrow" class="inactive" src="./assets/svg/big-right-arrow.svg"/>
+        <div id="reviews" class="reviews"></div>
         <img id="rightReviewArrow" src="./assets/svg/big-right-arrow.svg" />
       </section>
     </article>

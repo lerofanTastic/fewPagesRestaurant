@@ -171,29 +171,34 @@
 }
 
 /* svg изначально черный, делаем его белым в нужных случаях (на моб устройствах) */
-.about .mob #leftArrow,
-.values .mob #rightArrow {
+.about .mob .leftArrow,
+.values .mob .rightArrow {
     filter: invert(0);
 }
 
 /* на десктопе отличается не цвет а прозрачность */
-.about .dsk #leftArrow,
-.values .dsk #rightArrow {
+.about .dsk .leftArrow,
+.values .dsk .rightArrow {
     opacity: 0.4;
     cursor: default;
 }
 
-.about .dsk #rightArrow,
-.values .dsk #leftArrow {
+.about .dsk .rightArrow,
+.values .dsk .leftArrow {
     cursor: pointer;
     transition: transform ease 0.5s;
 }
 
-.about #rightArrow:hover {
+.rightArrow{
+    margin-left: 51px;
+    transform: rotate(180deg);
+}
+
+.about .rightArrow:hover {
     transform: rotate(180deg) scale(1.25);
 }
 
-.values #leftArrow:hover {
+.values .leftArrow:hover {
     transform: scale(1.25);
 }
 
