@@ -257,10 +257,9 @@
 
 .reviewContainer {
     display: grid;
-    grid-template-columns: 10vmax 1fr;
-    grid-template:  "p n"
-                    "p r"
-                    "t t";
+    grid-template-columns: 8vmax auto 10vw;
+    grid-template:  "p n r"
+                    "p t t";
     grid-gap: 30px;
     background: var(--text);
     color: var(--content);
@@ -268,6 +267,17 @@
     box-sizing: border-box;
     width: calc(40vw - 65px);
     padding: 30px;
+}
+
+.starRating {
+    grid-area: r;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    align-content: center;
+}
+
+.starRating img{
+    width: 100%;
 }
 
 #rightReviewArrow,
@@ -313,11 +323,7 @@
     font-weight: 700;
 }
 
-.starRating {
-    grid-area: r;
-    display: grid;
-    grid-template-columns: 34px 34px 34px 34px 34px;
-}
+
 
 #reviewsSubheader {
     font-family: var(--bn);
@@ -364,14 +370,117 @@
     font-weight: 700;
 }
 
+#showMore{
+    display: none;
+}
+
+#openSpecialOffer{
+    z-index: 100;
+    position: fixed;
+    left: 30px;
+    bottom: 50px;
+    width: 7vw;
+    height: 7vw;
+    border-radius: calc(7vw / 2);
+    background-color: var(--button);
+    color: var(--text);
+    font-size: 2em;
+    font-weight: 700;
+    border-color: white;
+    display: none;
+}
+
+#specialOffer{
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    display: none;
+}
+#specialOffer{ /*Часть для изменений*/
+    /* top: 10vh;
+    left: 30vw;
+    width: 40vw;
+    height: 80vh; */
+    top: 12vh;
+    left: calc((100vw - 80vh / 785 * 625) / 2);
+    height: 80vh;
+    width: auto;
+    aspect-ratio: 625/785;
+}
+#specialOffer .darkening{
+
+    height: auto;
+    aspect-ratio: 625/350;
+}
+
+#specialOffer .darkening{
+    background-color: none;
+}
+#specialOffer .pic{
+    background-image: url(../assets/img/special-offer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    aspect-ratio: 625/350;
+}
+#specialOffer .overlayText{
+    font-family: Bona Nova;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#specialOffer .overlayText{
+    padding-top: calc((100% / 625 * 350) * 1.08);
+    color: black;
+}
+#specialOffer .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Bona Nova;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    color: var(--text);
+}
+#specialOffer p{
+    padding: 30px 15px 0 15px;
+    text-align: center;
+}
+#specialOffer p{
+    font-size: 1.1em;
+    font-family: PT Sans;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+#specialOffer .bigButton{
+    margin: 45px auto;
+}
+
 /* версия для меньших экранов */
 @media screen and (max-width: 1250px) {
+    .starRating {
+        grid-area: r;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-content: center;
+    }
+    
+    .starRating img{
+        width: 100%;
+    }
     .reviewContainer {
         grid-template-columns: 10vmax 1fr;
-        grid-template:  "p"
-                        "n"
-                        "r"
-                        "t";
+        grid-template:  "p n"
+                        "p r"
+                        "t t";
         width: calc(80vw - 100px);
     }
     .reviewHeader {
@@ -379,9 +488,12 @@
     }
     .reviewPhoto {
         margin: auto;
-        height: 40vh;
-        width: 40vh;
+        height: 20vh;
+        width: 20vh;
         border-radius: 20vh;
+    }
+    #showMore{
+        display: none;
     }
 }
 
@@ -467,18 +579,84 @@
     }
 
     .reviews {
-        overflow-x: auto;
+        /* overflow-x: auto;
         padding: 10px 2vw 50px 2vw;
-        margin: 0;
+        margin: 0; */
+        flex-direction: column;
+    }
+    
+    .reviews .reviewContainer:not(:first-child) {
+        display: none; 
+    }
+    
+    .reviewContainer {
+        display: grid;
+        grid-template-columns: 10vmax 1fr;
+        grid-template:  "p n"
+                        "p r"
+                        "t t";
+    }
+
+    #reviewsCarousel{
+        padding: 166px 6vw 40px 6vw;
+    }
+
+    #showMore {
+        display: inline-block;
+        margin-left: 35vw;
+        margin-bottom: 40px;
+        width: 204px;
+        height: 55px;
+        top: 1885px;
+        left: 77px;
+        border-radius: 100px;
+        background: none;
+        color: var(--text);
+        border: 2px solid white;
+        font-family: PT Sans;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0em;
+        
     }
     .reviewPhoto {
         height: 10vh;
         width: 10vh;
-        border-radius: 5vh;
+        border-radius: 50%;
         grid-area: p;
     }
     #rightReviewArrow,
     #leftReviewArrow {
         display: none;
+    }
+
+    #specialOffer{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    #specialOffer .darkening{
+        background-color: rgba(0,0,0,0.5);
+    }
+    #specialOffer .overlayText{
+        padding-top: calc((100% / 625 * 350) * 0.4);
+        color: var(--text);
+    }
+    #specialOffer p{
+        font-size: 1.5em;
+    }
+    #openSpecialOffer{
+        display: none;
+    }
+    .starRating {
+        grid-area: r;
+        display: grid;
+        grid-template-columns: repeat(5, 2fr);
+    }
+    
+    .starRating img{
+        width: 100%;
     }
 }

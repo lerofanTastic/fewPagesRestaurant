@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="../style/fonts.css" />
     <link rel="stylesheet" href="../style/common.css" />
     <link rel="stylesheet" href="../style/contact.css" />
+    <!-- <link rel="stylesheet" href="../style/jquery.datetimepicker.min.css" /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous">
+    </script>
+    <!-- <script src="../jquery.datetimepicker.full.min.js"></script> -->
   </head>
   <body>
     <nav>
@@ -42,15 +49,7 @@
       </div>
       <table class="day-selector">
         <thead>
-          <tr>
-            <th>Пн</th>
-            <th>Вт</th>
-            <th>Ср</th>
-            <th>Чт</th>
-            <th>Пт</th>
-            <th>Сб</th>
-            <th>Вс</th>
-          </tr>
+           <!---scibididopdop-->
         </thead>
         <tbody>
           <!---scibididopdop-->
@@ -82,15 +81,12 @@
               <button class="number-control" id="num-guests-inc" type="button">
                 +
               </button>
+              <!-- <input type="number" name="num-guests" value="1" min="1" step="1" pattern="\d+"> -->
               Количество гостей
             </div>
             <div class="form-element">
-              <input
-                id="datetimepicker"
-                type="text"
-                name="date"
-                placeholder="Дата и время"
-              />
+              <input id="datetimepicker" type="text" name="date" placeholder="Дата и время"/>
+               <!-- <input type="datetime-local" name="data"> -->
             </div>
           </div>
           <input type="text" placeholder="Пожелания" name="comments" />

@@ -23,4 +23,14 @@ $(function(){
         reviewsContainer.scrollLeft -= offset + 40;
         $("#rightReviewArrow").removeClass("inactive");
     });
+    $("#showMore").on("click", function(){
+        $("#reviews .reviewContainer").show();
+        $("#showMore").hide();
+    });
+    $("#openSpecialOffer, .mobilePromo").on("click", function(){
+        $("#specialOffer").show();
+    });
+    $("#specialOffer .close").on("click", function(){
+        $("#specialOffer").hide();
+    });
 });

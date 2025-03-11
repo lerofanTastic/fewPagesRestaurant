@@ -218,7 +218,8 @@
 }
 
 #calendar .time-selector button.occupied {
-    visibility: hidden;
+    /* visibility: hidden; */
+    color: lightgray;
 }
 
 #calendar .time-selector button.selected {
